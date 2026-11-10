@@ -8,7 +8,7 @@ public class HotelApp {
 
         Room roomOne = new Room(2, 150.00);
 
-        System.out.println("BOOKING INFO");
+        System.out.println("BOOKING ROOM");
 
         System.out.println("Beds: " + roomOne.getNumberOfBeds());
         System.out.println("Price: $" + roomOne.getPrice());
@@ -58,10 +58,24 @@ public class HotelApp {
         System.out.println("Overtime Hours: " + employeeOne.getOvertimeHours());
         System.out.printf("Total Pay: $%.2f%n", employeeOne.getTotalPay());
 
+
+
         // testing Hotel Class
+        System.out.println("\nHotel Booking");
         Hotel hotel = new Hotel("Sleepy Inn", 25, 50, 20, 30);
         System.out.println("Available Suites: " + hotel.getAvailableSuites());
         System.out.println("Available Rooms: " + hotel.getAvailableRooms());
+
+        // testing booking suites
+        boolean bookingYay = hotel.backRoom(3,true);
+        System.out.println("Booking Successful: " + (bookingYay ? "Yes" : "No"));
+        System.out.println("Available Suites: " + hotel.getAvailableSuites());
+
+        hotel.backRoom(5,false);
+        System.out.println("Available Rooms: " + hotel.getAvailableRooms());
+
+        boolean manyRooms = hotel.backRoom(20, true);
+        System.out.println("Second Booking: " + (manyRooms ? "Success" : "Failed"));
 
 
 

@@ -38,6 +38,21 @@ public class Hotel {
     public int getAvailableRooms() {
         return numberOfRooms - bookedBasicRooms;
     }
+
+    public boolean backRoom(int roomCount, boolean suite) {
+        if (suite) {
+            if (roomCount <= getAvailableSuites()) {
+                bookedSuites += roomCount;
+                return true;
+            }
+            return false;
+        }
+        if (roomCount <= getAvailableSuites()) {
+            bookedBasicRooms += roomCount;
+            return true;
+        }
+        return false;
+    }
 }
 
 

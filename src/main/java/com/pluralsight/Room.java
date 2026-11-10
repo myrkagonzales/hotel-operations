@@ -11,7 +11,7 @@ public class Room {
     // Created constructor because each class requires one
     // when creating a room, what information must already exist?
     // left side: "this.... = the objects variable right side - constructors parameters
-    public Room(int numberOfBeds, double price, boolean occupied, boolean dirty) {
+    public Room(int numberOfBeds, double price) {
         this.numberOfBeds = numberOfBeds;
         this.price = price;
         this.occupied = occupied;

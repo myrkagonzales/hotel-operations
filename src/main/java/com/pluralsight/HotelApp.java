@@ -59,7 +59,7 @@ public class HotelApp {
         System.out.printf("Total Pay: $%.2f%n", employeeOne.getTotalPay());
 
         // testing Hotel Class
-        Hotel hotel = new Hotel("Sleepy Inn", 25, 50, 20, 15);
+        Hotel hotel = new Hotel("Sleepy Inn", 25, 50, 20, 30);
         System.out.println("Available Suites: " + hotel.getAvailableSuites());
         System.out.println("Available Rooms: " + hotel.getAvailableRooms());
 

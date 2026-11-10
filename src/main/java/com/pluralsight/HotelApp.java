@@ -5,10 +5,13 @@ public class HotelApp {
 
         // testing the room class
 
-        Room roomOne = new Room(2, 150);
+        Room roomOne = new Room(2, 150, false, false);
 
+        System.out.println(roomOne.getNumberOfBeds());
         System.out.println(roomOne.getPrice());
+        System.out.println(roomOne.isDirty());
         System.out.println(roomOne.isAvailable());
+
 
     }
 

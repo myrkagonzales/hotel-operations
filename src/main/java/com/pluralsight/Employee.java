@@ -43,6 +43,7 @@ public class Employee {
     // punch in
     public void punchIn(int time) {
         startTime = time;
+
     }
 
     // punch out

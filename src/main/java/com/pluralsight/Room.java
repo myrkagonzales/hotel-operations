@@ -57,4 +57,18 @@ public class Room {
         return !occupied && !dirty;
     }
 
+    // created methods for checkIn
+    public void checkIn() {
+        occupied =  true;
+        dirty = true;
+    }
+    // created method for checkOut
+    public void checkOut() {
+        occupied = false;
+    }
+
+    // created method for cleanRoom
+    public void cleanRoom() {
+        dirty = false;
+    }
 }

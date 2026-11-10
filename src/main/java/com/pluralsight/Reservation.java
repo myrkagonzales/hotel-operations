@@ -17,20 +17,32 @@ public class Reservation {
         this.weekend = weekend;
     }
 
-    // reservation total
-    public Double getReservationTotal() {
-        double pricePerNight = 0.0;
 
-        // IF the room type is a king bed
-        if(this.roomType.equalsIgnoreCase("king")) {
-            // if its a weekend, it will cost more; otherwise standard weekday price
-            pricePerNight = this.weekend ? 150.0 : 139.0;
-
-        } else {
-            // lets assume any other room type e.g "queen" has these rates
-            pricePerNight = this.weekend ? 125.0 : 115.0;
-        }
-        return pricePerNight * numberOfNights;
+    public String getRoomType() {
+        return roomType;
     }
+
+    public int getNumberOfNights() {
+        return numberOfNights;
+    }
+
+    public boolean isWeekend() {
+        return weekend;
+    }
+
+
+    // reservation total
+   public double getPrice() {
+        double price;
+        if(roomType.equalsIgnoreCase("king")) {
+            price = 139;
+        } else {
+            price = 124;
+        }
+        if (weekend) {
+            price = price * 1.10;
+        }
+        return price;
+   }
 
 }

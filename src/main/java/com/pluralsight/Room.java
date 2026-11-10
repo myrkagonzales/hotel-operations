@@ -53,7 +53,7 @@ public class Room {
     }
 
     // derived getters; only a room is available if it is clean and not occupied
-    private boolean isAvailable() {
+    public boolean isAvailable() {
         return !occupied && !dirty;
     }
 
